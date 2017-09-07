@@ -1,0 +1,2 @@
+Decisión del tipo de juego:
+A través de Facebook hubo una conversación donde se estipulo el modelo del juego que se iba a realizar. En un principio se habló se realizar un juego de carreras en el cual un vehículo debía esquivar obstáculos pero también se evaluó la  posibilidad de hacer un juego estilo “asteroids”. 
