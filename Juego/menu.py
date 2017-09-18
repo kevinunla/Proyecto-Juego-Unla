@@ -38,7 +38,7 @@ def main ():
                     if ( 100< pygame.mouse.get_pos()[1] < 150):     #opcion Start del menu
                         print "opcion 1"
                         #aca va la funcion Start
-                    elif ( 180< pygame.mouse.get_pos()[1] < 220):     #opcion 2 del menu
+                    elif ( 180< pygame.mouse.get_pos()[1] < 230):     #opcion 2 del menu
                         #aca va la funcion 2
                         print "opcion 2"
                     elif ( 260< pygame.mouse.get_pos()[1] < 310):     #opcion 3 del menu
