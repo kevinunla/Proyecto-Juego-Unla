@@ -1,4 +1,6 @@
-import sys, pygame
+Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:42:59) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> import sys, pygame
 from pygame.locals import *
  
  
@@ -110,10 +112,10 @@ def main():
     pygame.display.set_caption("juego")
    
  
-    fondouno = imagen("imagen/fondouno.jpg")
+    fondouno = imagen("imagenes/fondouno.jpg")
    
          
-    blueman = imagen("imagen/caminar.png",True)  
+    blueman = imagen("imagenes/caminar.png",True)  
     blueman_inv=pygame.transform.flip(blueman,True,False);
      
     clock = pygame.time.Clock()
