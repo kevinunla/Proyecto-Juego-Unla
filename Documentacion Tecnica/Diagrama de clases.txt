@@ -1,0 +1,39 @@
+
+juego
+______________
+  -atributosde configuracion de pantalla
+  -tamañoVentana
+  -banderas de bucles
+______________
+  +new() #se va a encargar de crear las inicializar el juego
+  +update()   #se va a encargar de manejar la parte logica del juego
+  +draw()   #se va a encargar de la parte grafica del juego
+  +pantallaInicio()   #introduccion con historia
+  +pantallaMuerte()   #pantalla de muerte/puntuacion
+
+=============================================================
+menu
+______________
+  -posiciones de botones
+  
+______________
+  +highlightButton()
+  
+=============================================================
+personaje
+______________
+  -vectorPosicion
+  -vectorVelocidad
+  -vectorAceleracion
+______________
+  +jump()
+  +move()
+  
+  
+=============================================================
+terreno
+______________
+  -posicionesPlataformas
+  
+______________
+  

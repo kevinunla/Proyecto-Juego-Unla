@@ -1,0 +1,26 @@
+TO DO:
+    1-buscar sprites de personajes
+    2-inventar historia
+    3-diseñar nivel1(ubicacion de plataformas, posibles puzles )
+    
+
+
+TAREA YA ASIGNADA:(TAREA) 
+  -menu Basico(pablo)
+  
+
+
+TESTEOS DISPONIBLES:
+
+
+TESTEOS YA ASIGNADOS:
+ 
+ 
+
+TAREAS TERMINADAS
+  -tematica del juego
+  
+  -
+___________________________________________________________________________________
+(autoasignar tareas que quieran hacer, recortar tareas a la seccion que corresponda)
+AGREGUEN TAREAS! 
