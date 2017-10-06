@@ -7,7 +7,8 @@ from pygame.locals import *
 # Constantes
 WIDTH = 900
 HEIGHT = 500
-MposX =300
+MposX =450
+MposY =0
  
  
 cont=6
@@ -34,6 +35,7 @@ def teclado():
     teclado = pygame.key.get_pressed()
      
     global MposX
+    global MposY
     global cont, direc
    
        
@@ -45,7 +47,7 @@ def teclado():
         MposX-=2
         cont+=1
         direc=False
-    elif teclado[K_q]:
+    elif teclado[K_UP]:
         #SALTO
         MposX-=2
     #else :
@@ -58,21 +60,21 @@ def sprite():
     global cont
  
     xixf[0]=(0,0,31,50)
-    xixf[1]=(33,0,61,50)
-    xixf[2]=(64,0,90,50)
-    xixf[3]=(91,0,113,50)
-    xixf[4]=(115,0,136,50)
-    xixf[5]=(139,0,159,50)
-    xixf[6]=(161,0,185,50)
+    xixf[1]=(33,0,28,50)
+    xixf[2]=(64,0,26,50)
+    xixf[3]=(91,0,22,50)
+    xixf[4]=(115,0,21,50)
+    xixf[5]=(139,0,20,50)
+    xixf[6]=(161,0,24,50)
     
        
-    Rxixf[0]=(185,0,161,50)
-    Rxixf[1]=(159,0,139,50)
-    Rxixf[2]=(136,0,115,50)
-    Rxixf[3]=(113,0,91,50)
-    Rxixf[4]=(90,0,64,50)
-    Rxixf[5]=(61,0,33,50)
-    Rxixf[6]=(31,0,0,50)
+    Rxixf[0]=(155,0,28,50)
+    Rxixf[1]=(126,0,24,50)
+    Rxixf[2]=(97,0,23,50)
+    Rxixf[3]=(73,0,21,50)
+    Rxixf[4]=(51,0,18,50)
+    Rxixf[5]=(27,0,19,50)
+    Rxixf[6]=(0,0,23,50)
    
     p=7
    
@@ -137,10 +139,10 @@ def main():
         screen.blit(fondouno, (0, 0))
        
         if direc==True:
-            screen.blit(blueman, ( MposX, 318),(xixf[i]))
+            screen.blit(blueman, ( MposX, 450),(xixf[i]))
    
         if direc==False:
-            screen.blit(blueman_inv, ( MposX, 318),(Rxixf[i]))
+            screen.blit(blueman_inv, ( MposX, 450),(Rxixf[i]))
    
         pygame.display.flip()
        
