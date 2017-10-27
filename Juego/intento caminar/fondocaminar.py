@@ -5,9 +5,9 @@ from pygame.locals import *
  
  
 # Constantes
-WIDTH = 900
-HEIGHT = 500
-MposX =450
+WIDTH = 1280
+HEIGHT = 720
+MposX =330
 MposY =0
  
  
@@ -29,8 +29,6 @@ def imagen(filename, transparent=False):
                 image.set_colorkey(color, RLEACCEL)
         return image
  
-
-
 def teclado():
     teclado = pygame.key.get_pressed()
      
@@ -59,24 +57,24 @@ def sprite():
  
     global cont
  
-    xixf[0]=(0,0,31,50)
-    xixf[1]=(33,0,28,50)
-    xixf[2]=(64,0,26,50)
-    xixf[3]=(91,0,22,50)
-    xixf[4]=(115,0,21,50)
-    xixf[5]=(139,0,20,50)
-    xixf[6]=(161,0,24,50)
-    
+    xixf[0]=(0,0,163,208)
+    xixf[1]=(164,0,162,208)
+    xixf[2]=(328,0,160,208)
+    xixf[3]=(490,0,159,208)
+    xixf[4]=(653,0,155,208)
+    xixf[5]=(809,0,158,208)
+    xixf[6]=(969,0,160,208)
+    xixf[7]=(1133,0,162,208)
        
-    Rxixf[0]=(155,0,28,50)
-    Rxixf[1]=(126,0,24,50)
-    Rxixf[2]=(97,0,23,50)
-    Rxixf[3]=(73,0,21,50)
-    Rxixf[4]=(51,0,18,50)
-    Rxixf[5]=(27,0,19,50)
-    Rxixf[6]=(0,0,23,50)
-   
-    p=7
+    Rxixf[0]=(1137,0,163,208)
+    Rxixf[1]=(973,0,162,208)
+    Rxixf[2]=(811,0,160,208)
+    Rxixf[3]=(650,0,159,208)
+    Rxixf[4]=(491,0,155,208)
+    Rxixf[5]=(332,0,158,208)
+    Rxixf[6]=(170,0,160,208)
+    Rxixf[7]=(0,0,166,208)
+    p=8
    
     global i
        
@@ -100,6 +98,9 @@ def sprite():
        
     if cont==p*7:
         i=6
+
+    if cont==p*8:
+        i=7
         cont=0
    
     return
@@ -117,7 +118,7 @@ def main():
     fondouno = imagen("imagenes/fondouno.jpg")
    
          
-    blueman = imagen("imagenes/caminar.png",True)  
+    blueman = imagen("imagenes/personaje.png",True)  
     blueman_inv=pygame.transform.flip(blueman,True,False);
      
     clock = pygame.time.Clock()
@@ -134,15 +135,15 @@ def main():
        
        
    
-        fondouno = pygame.transform.scale(fondouno, (900, 500))
+        fondouno = pygame.transform.scale(fondouno, (1280, 720))
              
         screen.blit(fondouno, (0, 0))
        
         if direc==True:
-            screen.blit(blueman, ( MposX, 450),(xixf[i]))
+            screen.blit(blueman, ( MposX, 330),(xixf[i]))
    
         if direc==False:
-            screen.blit(blueman_inv, ( MposX, 450),(Rxixf[i]))
+            screen.blit(blueman_inv, ( MposX, 330),(Rxixf[i]))
    
         pygame.display.flip()
        
