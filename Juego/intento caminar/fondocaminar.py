@@ -7,17 +7,20 @@ from pygame.locals import *
 # Constantes
 WIDTH = 1280
 HEIGHT = 720
-MposX =330
-MposY =0
+MposX =0
+MposY =330
  
  
-cont=6
+cont=8
 direc=True
 i=0
 xixf={}
 Rxixf={}
 
-
+salto = False
+bajada=False 
+salto_camina= False
+bajada_camina=False
  
 def imagen(filename, transparent=False):
         try: image = pygame.image.load(filename)
@@ -34,23 +37,28 @@ def teclado():
      
     global MposX
     global MposY
-    global cont, direc
+    global cont, direc,salto, salto_camina
    
-       
-    if teclado[K_RIGHT]:
+     
+
+
+    if teclado[K_RIGHT]and salto==False and salto_camina==False:
         MposX+=2
         cont+=1
         direc=True
-    elif teclado[K_LEFT]:
+    elif teclado[K_LEFT]and salto==False and salto_camina==False:
         MposX-=2
         cont+=1
         direc=False
-    elif teclado[K_UP]:
-        #SALTO
-        MposX-=2
-    #else :
-    #cont=6
-       
+    elif teclado[K_UP] and salto==False and salto_camina==False:
+        salto=True          
+    elif teclado[K_UP]and teclado[K_RIGHT] and salto_camina==False:
+            salto_camina=True
+    elif teclado[K_UP]and teclado[K_LEFT] and salto_camina==False:
+            salto_camina=True
+    else :
+         cont=8
+         
     return
 
 def sprite():
@@ -123,7 +131,9 @@ def main():
      
     clock = pygame.time.Clock()
    
-     
+
+    
+
  
     # el bucle principal del juego
     while True:
@@ -139,12 +149,65 @@ def main():
              
         screen.blit(fondouno, (0, 0))
        
-        if direc==True:
-            screen.blit(blueman, ( MposX, 330),(xixf[i]))
+        global MposX,MposY,salto,bajada,salto_camina,bajada_camina
+       
+        if direc==True and salto==False:
+            screen.blit(blueman, ( MposX, MposY),(xixf[i]))
    
-        if direc==False:
-            screen.blit(blueman_inv, ( MposX, 330),(Rxixf[i]))
-   
+        if direc==False and salto==False:
+            screen.blit(blueman_inv, ( MposX, MposY),(Rxixf[i]))
+       
+       
+       #salto normal
+        if salto==True:            
+           
+            if direc==True:
+                screen.blit(blueman, ( MposX, MposY),(xixf[6]))
+            if direc==False:
+                screen.blit(blueman_inv, ( MposX, MposY),(Rxixf[6]))  
+           
+            if bajada==False:
+                MposY-=5              
+               
+            if bajada==True:
+                MposY+=5              
+           
+            if MposY==200:
+                bajada=True
+           
+            if MposY==330:
+                bajada=False
+                salto=False
+
+        if salto_camina==True and direc==True:
+               
+                screen.blit(blueman, ( MposX, MposY),(xixf[6]))                         
+                if bajada_camina==False:
+                        MposY-=5
+                        MposX+=2
+                if bajada_camina==True:
+                    MposY+=5
+                    MposX+=2
+                if MposY==200:
+                        bajada_camina=True
+                if MposY==330:
+                        bajada_camina=False
+                        salto_camina=False
+
+        if salto_camina==True and direc==False:
+               
+                screen.blit(blueman_inv, ( MposX, MposY),(xixf[6]))                         
+                if bajada_camina==False:
+                        MposY-=5
+                        MposX-=2
+                if bajada_camina==True:
+                    MposY+=5
+                    MposX-=2
+                if MposY==200:
+                        bajada_camina=True
+                if MposY==330:
+                        bajada_camina=False
+                        salto_camina=False
         pygame.display.flip()
        
        
