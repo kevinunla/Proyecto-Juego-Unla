@@ -9,14 +9,18 @@ WIDTH = 1280
 HEIGHT = 720
 MposX =0
 MposY =330
- 
- 
+BposY=368 
+BposX =160
+BposXX=0
 cont=8
 direc=True
 i=0
+a=0
 xixf={}
+xixfm={}
 Rxixf={}
-
+Rxixfm={}
+disparo= False
 salto = False
 bajada=False 
 salto_camina= False
@@ -37,17 +41,21 @@ def teclado():
      
     global MposX
     global MposY
-    global cont, direc,salto, salto_camina
+    global cont, direc,salto, salto_camina,disparo,BposX,BposXX
    
      
 
 
     if teclado[K_RIGHT]and salto==False and salto_camina==False:
-        MposX+=2
+        MposX+=5
+        BposX+=5
+        BposXX+=5
         cont+=1
         direc=True
     elif teclado[K_LEFT]and salto==False and salto_camina==False:
-        MposX-=2
+        MposX-=5
+        BposX-=5
+        BposXX-=5
         cont+=1
         direc=False
     elif teclado[K_UP] and salto==False and salto_camina==False:
@@ -56,6 +64,10 @@ def teclado():
             salto_camina=True
     elif teclado[K_UP]and teclado[K_LEFT] and salto_camina==False:
             salto_camina=True
+    elif teclado[K_x]:
+        disparo=True
+    elif teclado[K_x]:
+        disparo=True
     else :
          cont=8
          
@@ -125,7 +137,8 @@ def main():
  
     fondouno = imagen("imagenes/fondouno.jpg")
    
-         
+    municion= imagen("imagenes/Municion.png",True)
+    municion_inv=pygame.transform.flip(municion,True,False);
     blueman = imagen("imagenes/personaje.png",True)  
     blueman_inv=pygame.transform.flip(blueman,True,False);
      
@@ -146,18 +159,30 @@ def main():
        
    
         fondouno = pygame.transform.scale(fondouno, (1280, 720))
-             
+        municion = pygame.transform.scale(municion, (22, 8))
+        municion_inv = pygame.transform.scale(municion_inv, (22, 8))
         screen.blit(fondouno, (0, 0))
        
-        global MposX,MposY,salto,bajada,salto_camina,bajada_camina
+        global MposX,MposY,salto,bajada,salto_camina,bajada_camina,disparo,bala,BposY,BposX,BposXX
        
         if direc==True and salto==False:
             screen.blit(blueman, ( MposX, MposY),(xixf[i]))
-   
         if direc==False and salto==False:
             screen.blit(blueman_inv, ( MposX, MposY),(Rxixf[i]))
-       
-       
+        if disparo==True and direc==True:
+            screen.blit(municion, ( BposX, BposY))
+            while BposX<1280:
+                BposX+=8
+                break
+        if BposX>1279:
+            BposX==MposX+160
+        if disparo==True and direc==False:
+            screen.blit(municion_inv, ( BposXX, BposY))
+            while BposXX>0:
+                BposXX-=8
+            break
+        if BposXX<1:
+            BposXX==MposX
        #salto normal
         if salto==True:            
            
