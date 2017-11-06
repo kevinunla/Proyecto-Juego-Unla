@@ -52,15 +52,31 @@ class Juego:
     def mostrarPantallaInicio(self):
         #pantalla de incio / menu inicio
         self.pantalla.fill(GRIS1)
-        self.drawTexto("Iniciar", 40, GRIS2, ANCHO/2, (ALTO/8)*2)
-        self.drawTexto("Puntuaciones", 40, GRIS2, ANCHO/2, (ALTO/8)*4)
-        self.drawTexto("Ayuda", 40, GRIS2, ANCHO/2, (ALTO/2)*6)
-        self.drawTexto("Salir", 40,  GRIS2, ANCHO/2, (ALTO/2)*8)
+        self.drawTexto("Iniciar", 40, GRIS2, ANCHO/2, ALTO/18*6)
+        self.drawTexto("Puntuaciones", 40, GRIS2, ANCHO/2, ALTO/18*9)
+        self.drawTexto("Ayuda", 40, GRIS2, ANCHO/2, ALTO/18*12)
+        self.drawTexto("Salir", 40,  GRIS2, ANCHO/2, ALTO/18*15)
+        pg.display.flip()
+        self.esperarATeclado()
 
+    def esperarATeclado(self):
+        esperando = True
+        while esperando:
+            self.reloj.tick(FPS)
+            for event in pg.event.get():
+                if event.type == pg.QUIT:
+                    esperando = False
+                    self.corriendo = False
+                if event.type == pg.KEYUP:
+                    esperando = False
 
     def mostrarPantallaFin(self):
         #pantalla cuando muere el personaje
-        pass
+        if self.corriendo :
+            self.pantalla.fill(GRIS1)
+            self.drawTexto("Fin Partida", 60, ROJO, ANCHO/2, ALTO/2)
+            pg.display.flip()
+            self.esperarATeclado()
 
     def drawTexto(self, string, tamanio, color, x, y):
         nombreFuente = pg.font.match_font("DemoFont")
