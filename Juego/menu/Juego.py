@@ -30,7 +30,7 @@ def main ():
 
 
     def drawMenuText():
-        fuenteMenu = pygame.font.Font("Demofont.otf", 40)
+        fuenteMenu = pygame.font.Font("DemoFont.otf", 40)
 
         textoStart = fuenteMenu.render("Iniciar",1,gris2)
         textoPuntuaciones = fuenteMenu.render("Puntuaciones",1,gris2)
