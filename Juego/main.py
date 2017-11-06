@@ -9,25 +9,21 @@ class Juego:
         #inicializa la pantalla del juego,etc
         pg.init()
         pg.font.init()
+        pg.display.set_caption(TITULO)
+
         self.corriendo = True
         self.pantalla = pg.display.set_mode((ANCHO, ALTO))
-        pg.display.set_caption(TITULO)
         self.reloj = pg.time.Clock()
-
-
-
-
-        pass
 
     def new (self):
         #reinicializa las variables del juego
-        todosLosSprites = pg.sprite.Group()
+        self.todosLosSprites = pg.sprite.Group()
 
 
     def run(self):
         #bucle del juego
         self.jugando = True
-        while jugando:
+        while self.jugando:
             self.reloj.tick(FPS)
             self.events()
             self.update()
@@ -39,9 +35,9 @@ class Juego:
 
     def events(self):
         #bucle de juego - eventos
-        for event in pygame.event.get():
+        for event in pg.event.get():
 
-            if event.type == pygame.QUIT: #si clickeo en la X se cierra la ventana
+            if event.type == pg.QUIT: #si clickeo en la X se cierra la ventana
                 if self.jugando:
                     self.jugando = False
                 self.corriendo = False
@@ -49,9 +45,9 @@ class Juego:
     def draw(self):
         #bucle de juego - dibuja
         #maneja la parte grafica del juego
-        self.pantalla.fill(gris1)
+        self.pantalla.fill(GRIS1)
         self.todosLosSprites.draw(self.pantalla)
-        pg.pantalla.flip()
+        pg.display.flip()
 
     def mostrarPantallaInicio(self):
         #pantalla de incio / menu inicio
