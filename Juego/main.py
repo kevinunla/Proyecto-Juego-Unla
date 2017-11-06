@@ -1,6 +1,5 @@
 
 import pygame as pg
-
 #importa la libreria de pygame con el nombre de pg
 from settings import *
 
@@ -50,14 +49,22 @@ class Juego:
         pg.display.flip()
 
     def mostrarPantallaInicio(self):
-        #pantalla de incio / menu inicio
+        #pantalla de incio / menu inicio          ]
         self.pantalla.fill(GRIS1)
         self.drawTexto("Iniciar", 40, GRIS2, ANCHO/2, ALTO/18*6)
-        self.drawTexto("Puntuaciones", 40, GRIS2, ANCHO/2, ALTO/18*9)
+        self.drawTexto("Puntuaciones", 40,  GRIS2, ANCHO/2, ALTO/18*9)
         self.drawTexto("Ayuda", 40, GRIS2, ANCHO/2, ALTO/18*12)
-        self.drawTexto("Salir", 40,  GRIS2, ANCHO/2, ALTO/18*15)
+        self.drawTexto("Salir", 40, GRIS2, ANCHO/2, ALTO/18*15)
         pg.display.flip()
         self.esperarATeclado()
+
+
+    def setHighlight(self):
+        if option.rect.collidepoint(pygame.mouse.get_pos()):
+            color = HIGHGRIS2
+        else:
+            color = GRIS2
+        return color
 
     def esperarATeclado(self):
         esperando = True

@@ -1,6 +1,6 @@
 ##opciones del juego configuraciones
-ANCHO = 480
-ALTO = 640
+ANCHO = 640
+ALTO = 480
 FPS = 30
 TITULO = "Juego"
 
