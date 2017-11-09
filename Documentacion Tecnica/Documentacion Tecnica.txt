@@ -1,0 +1,107 @@
+
+Organización trabajo
+
+Se comenzó discutiendo en clases sobre que queríamos basar el juego, una vez establecido el tipo de juego se 
+procedió a armar un kanban donde se mostraban las tareas a realizar y cada uno del grupo por chat vía facebook y 
+whatsapp nos íbamos asignando las tareas quien armaría el menú del juego quien se encargaría de darle el acabado 
+grafico al juego (cargado y modificación del tamaño de las imágenes), definición de los enemigos, personaje principal, 
+fondo de pantalla del juego, luego decidimos juntarnos un una casa para poder terminar el armado del juego todos juntos
+ para ver como se irían uniendo las distintas partes, poder analizar y solucionar los conflictos en el código del juego 
+entre todos.
+
+
+
+Tipo de Juego y programas utilizados
+
+El tipo de juego se llego a la conclusión de realizar un tipo arcade por problemas al tratar de realizar un juego tipo
+ plataforma donde el movimiento al avanzar con el fondo se complico mas problemas con el movimiento al saltar del personaje,
+ agregarle esos movimientos a los enemigos durante la realización del primer modelo de juego el tipo plataforma se 
+encontraron con que algunas funciones en la versión de Python 2.7 no funcionaban en Python 3.6 por lo que decimos
+ trabajar sobre Python 2.7 por mayor comodidad ya que los videos de tutoriales donde aprendíamos trabajaban sobre
+ Python 2.7 y resultaba tener mejor sinergia con la librería pygame.
+
+
+
+Se utilizaron muchos recursos para la realización del juego
+
+Las principales herramientas fueron obtenidas de video tutoriales de Internet
+
+
+Curso Pygame 
+
+Canal de Youtube: CodigoFacilito
+
+https://codigofacilito.com/cursos/pygame
+
+
+
+Curso Pygame 
+Canal de Youtube: Kris Occhipinti
+
+https://www.youtube.com/watch?v=DvngNtPzE1Q
+
+
+
+
+[Tutorial / Curso] Videojuego con Python + Pygame
+
+Canal de Youtube: MrCarri
+
+
+
+
+Python Game Programming Tutorial: Space Invaders
+
+https://www.youtube.com/watch?v=crV6T3piwHQ
+
+Canal: Christian Thompson
+
+
+
+
+
+
+Trabajamos también con unos modelos ya realizados
+
+
+https://github.com/justinmeister/SpaceInvaders
+
+https://github.com/russb78/pivaders
+
+https://github.com/lukaszjagodzinski/space-invaders-pygame
+
+https://github.com/leerob/Space_Invaders
+
+https://codereview.stackexchange.com/questions/91220/running-a-version-of-space-invaders
+
+
+
+
+
+
+Futuras líneas
+
+Disconformidad con una de los ataques del "Jefe Final" donde su primer ataque una bombas son puestas en el camino de
+ la nave y la única forma de quitarlas es colisionando contra ellas y perder una vida reduciendo en algunos casos
+ notoriamente el área de movilidad del jugador y dificultando seriamente la posibilidad de ganar el jugador teniendo
+ que esquivar las balas de la nave enemiga y los cometas del entorno espacial.
+
+
+
+
+
+Conclusión
+
+El resultado final es un juego conocido como "Space Invaders" en el cual se debe derrotar a las naves enemigas eliminándolas
+una a una hasta que sean todas eliminadas. El código del juego esta compuesto por clases y un juego principal,
+ múltiples imágenes y sonidos.
+La forma de trabajo fue en un principio fue dividir las tareas pero a medida que se presentaban problemas trabajábamos 
+juntos en solucionarlos y el proceso de realización fue en su mayor medida en equipo
+
+
+
+
+
+
+Agradecimientos
+A código facilito por los tutoriales que fueron de gran ayuda para definir las clases.
