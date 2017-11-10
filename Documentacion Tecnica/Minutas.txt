@@ -1,0 +1,60 @@
+20/9
+Eleccion del juego
+optamos por hacer un juego de carreras
+
+
+
+23/9
+Cambio de juego
+El juego de carreras puede representar problemas que no podemos resolver
+cambiamos por un Space Invader
+
+
+
+27/9
+Eleccion imagenes 
+elegimos las naves del juego
+
+
+
+27/9
+Eleccion de musica: escuchamos algunos sonidos para nuestro juego y elegimos los que nos parecian mas apropiados
+
+
+
+3/10
+Busqueda de información
+Compartimos documentos y tutoriales de pygame
+
+
+
+4/10
+Problemas con versiones
+ problemas de ejecucion de codigo: Notamos que en la version 3.6 de python no 
+funcionan algunas cosas que en la 2.7 si. Nos pusimos de acuerdo en trabajar todos en la 2.7
+
+
+
+5/10
+Tecnica
+Discutimos si usariamos clases o no
+
+6/10
+Prototipos
+Acorordamos hacer prototipos de prueba para familiarizarnos con el modulo de pygame
+
+
+
+9/10
+Eleccion de  sprites
+Conseguimos diferentes sprites y elegimos el mas apropiado
+
+
+
+10/10
+encontramos severos problemas con la realizacion del enemigo. 
+Nos pusimos de acuerdo en buscar informacion para ver como podemos solucionarlo
+
+
+
+
