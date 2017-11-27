@@ -81,7 +81,7 @@ https://codereview.stackexchange.com/questions/91220/running-a-version-of-space-
 
 Futuras líneas
 
-Disconformidad con una de los ataques del "Jefe Final" donde su primer ataque una bombas son puestas en el camino de
+Disconformidad con uno de los ataques del "Jefe Final" donde su primer ataque una bombas son puestas en el camino de
  la nave y la única forma de quitarlas es colisionando contra ellas y perder una vida reduciendo en algunos casos
  notoriamente el área de movilidad del jugador y dificultando seriamente la posibilidad de ganar el jugador teniendo
  que esquivar las balas de la nave enemiga y los cometas del entorno espacial.

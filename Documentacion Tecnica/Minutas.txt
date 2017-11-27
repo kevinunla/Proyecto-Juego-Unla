@@ -52,9 +52,14 @@ Conseguimos diferentes sprites y elegimos el mas apropiado
 
 
 10/10
-encontramos severos problemas con la realizacion del enemigo. 
+encontramos severos problemas con la realizacion del enemigo.
 Nos pusimos de acuerdo en buscar informacion para ver como podemos solucionarlo
 
 
+23/10
+Nos juntamos en la casa de uno de los integrantes para decidir como avanzar en el proyecto se decidio avandonar el proyecto en cursos por dificultades y realizar un juego arcade del estilo space invaders.
 
+
+6/11
+Nos jutamos en la casa de uno de los integrantes para discutir algunos asuntos y darle el acabado final al juego.
 
